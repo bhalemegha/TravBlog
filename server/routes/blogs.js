@@ -1,8 +1,6 @@
 import express from 'express';
-
+import { getAllPosts } from '../controller/blogs.js';
 const router = express.Router();
-router.get('/', (req,res) => {
-  res.send("It works!")
-})
+router.get('/', getAllPosts);
 
 export default router;
