@@ -1,16 +1,18 @@
 // import logo from './logo.svg';
 import { Container, AppBar, Typography, Grid, Grow } from "@material-ui/core"
 import './App.css';
-import travblog from "./images/travblog.jpg"
+import travblog from "./images/luggage-gbd41dfcff_1280.jpg"
 import Blogs from "./components/blogs/blogs";
 import Form from "./components/form";
+import useStyles from './styles.js'
 
 function App() {
+  const classes = useStyles()
   return (
     <Container>
-      <AppBar position="static" color="inherit">
-        <Typography variant="h2" align="center">TravBlog</Typography>
-          <img src={travblog} alt="travblog" height="60"/>
+      <AppBar className={classes.appBar} position="static" color="inherit">
+        <Typography className={classes.heading} variant="h2" align="center">TravBlog</Typography>
+        <img className={classes.image} src={travblog} alt="travblog" height="60"/>
       </AppBar>
       <Grow in>
         <Container>
